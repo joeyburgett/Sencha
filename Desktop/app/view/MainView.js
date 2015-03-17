@@ -4,6 +4,13 @@
 Ext.define('Desktop.view.MainView', {
     extend: 'Ext.window.Window',
     alias: 'widget.dialog',
+    tools:[{
+        type: 'refresh',
+        tooltip: 'Requery API',
+        handler: function() {
+            Ext.getStore('CompanyStore').reload();
+        }
+    }],
 
     initComponent: function () {
         var me = this,

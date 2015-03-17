@@ -13,13 +13,15 @@
     };
 
     homeController.init = function (app) {
-        
+
+        // GET
         app.get("/api", function (request, response) {
             data.getCompanies(function(error, records){
                 actionResponse(error, records, response);
             });
         });
 
+        // GET:id
         app.get('/api/:id', function (request, response) {
             var id = request.params.id;
             data.getCompany(id, function(error, records) {
@@ -27,6 +29,7 @@
             });
         });
 
+        // PUT:id {body}
         app.put('/api/:id', function(request, response) {
             var body = request.body;
             var id = request.params.id;
@@ -35,6 +38,7 @@
             });
         });
 
+        // POST {body}
         app.post('/api', function (request, response) {
             var body = request.body;
             data.createCompany(body, function (error, records) {
@@ -42,6 +46,7 @@
             });
         });
 
+        // DELETE:id
         app.delete('/api/:id', function (request, response) {
             var id = request.params.id;
             data.deleteCompany(id, function (error, success) {

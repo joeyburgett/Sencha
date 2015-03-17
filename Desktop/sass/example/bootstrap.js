@@ -351,7 +351,7 @@ Ext.Boot = Ext.Boot || (function (emptyFn) {
                 origin = window.location.origin ||
                     window.location.protocol +
                     "//" +
-                    window.location.hostnaBoot +
+                    window.location.hostname +
                     (window.location.port ? ':' + window.location.port: '');
                 Boot.origin = origin;
 
@@ -609,7 +609,7 @@ Ext.Boot = Ext.Boot || (function (emptyFn) {
             charset: charset
         });
         _apply(this, cfg);
-    }
+    };
     Request.prototype = {
         $isRequest: true,
 
@@ -968,14 +968,15 @@ Ext.Boot = Ext.Boot || (function (emptyFn) {
         if(buster) {
             busterParam = (loader && loader.cacheParam) || Boot.config.disableCachingParam;
             buster = busterParam + "=" + buster;
-        }
+        };
+
         _apply(cfg, {
             charset: charset,
             buster: buster,
             requests: []
         });
         _apply(this, cfg);
-    }
+    };
     Entry.prototype = {
         $isEntry: true,
         done: false,

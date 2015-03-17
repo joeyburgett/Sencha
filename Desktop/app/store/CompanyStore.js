@@ -27,6 +27,12 @@ Ext.define('Desktop.store.CompanyStore', {
         writer: {
             type: 'json',
             writeAllFields: true
+        },
+        listeners: {
+            exception: function(store, request, operation, eOpts ){
+                Ext.MessageBox.alert('Error','An error occured accessing REST API.');
+                return false;
+            }
         }
     }
 });

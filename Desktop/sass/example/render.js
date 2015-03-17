@@ -311,7 +311,7 @@ Ext.theme = {
      * @private
      */
     render: function () {
-        console.log("rendering widgets...");
+        console.log("rendering widgets...")
         var manifest = Ext.theme._manifest;
         var shortcuts = Ext.theme._shortcuts;
 
