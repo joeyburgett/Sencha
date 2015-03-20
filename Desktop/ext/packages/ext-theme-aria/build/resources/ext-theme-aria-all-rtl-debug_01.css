@@ -821,7 +821,7 @@
 /**
  * @var {boolean}
  * True to adjust the padding of borderless panel headers so that their height is the same
- * as the height of bordered panels.  This is helpful when borderless and bordered panels
+ * as the height of bordered panel.  This is helpful when borderless and bordered panel
  * are used side-by-side, as it maintains a consistent vertical alignment.
  */
 /**
@@ -10858,7 +10858,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
  *
  * @param {number} [$ui-header-noborder-adjust=$panel-header-noborder-adjust]
  * True to adjust the padding of borderless panel headers so that their height is the same
- * as the height of bordered panels.  This is helpful when borderless and bordered panels
+ * as the height of bordered panel.  This is helpful when borderless and bordered panel
  * are used side-by-side, as it maintains a consistent vertical alignment.
  *
  * @param {number} [$ui-tool-spacing=$panel-tool-spacing]
