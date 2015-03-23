@@ -10,7 +10,7 @@
             response.set('Content-Type', 'application/json');
             response.status(200).send({success: true, data: records});
         }
-    };
+    }
 
     homeController.init = function (app) {
 

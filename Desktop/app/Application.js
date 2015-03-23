@@ -6,18 +6,16 @@
 Ext.define('Desktop.Application', {
     extend: 'Ext.app.Application',
     name: 'Desktop',
-    controllers: [
-        'Main'
-    ],
-    launch: function () {
 
-        Ext.widget({
-            xtype: 'dialog',
-            renderTo: Ext.getBody(),
-            height: 500,
-            width: 700,
-            frame: true,
-            title: 'Complex Binding Sample'
-        });
+    views: [
+        'login.Login',
+        'login.Register',
+        'main.Company'
+    ],
+
+    launch: function () {
+        var token = localStorage.getItem('X-Access-Token');
+
+        Ext.widget(token ? 'dialog' : 'login');
     }
 });

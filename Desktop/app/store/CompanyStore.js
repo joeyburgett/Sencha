@@ -17,7 +17,7 @@ Ext.define('Desktop.store.CompanyStore', {
          * -- The NodeJS webapi serves the same data contained in this static file
          */
         type: 'rest',
-        url: 'http://localhost:3000/api',
+        url: 'http://localhost:3000/api/v1',
         //type: 'ajax',
         //url: 'app/data/data.json',
         reader: {
@@ -30,7 +30,8 @@ Ext.define('Desktop.store.CompanyStore', {
         },
         listeners: {
             exception: function(store, request, operation, eOpts ){
-                Ext.MessageBox.alert('Error','An error occured accessing REST API.');
+                Ext.MessageBox.alert('Error','An error occurred accessing REST API.');
+
                 return false;
             }
         }

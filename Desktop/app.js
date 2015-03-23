@@ -5,16 +5,5 @@
  */
 Ext.application({
     extend: 'Desktop.Application',
-    name: 'Desktop',
-    controllers: [
-        'Main'
-    ],
-    launch: function () {
-        Ext.widget('dialog', {
-            autoShow: true,
-            width: 1015,
-            height: 400,
-            renderTo: Ext.getBody()
-        });
-    }
+    name: 'Desktop'
 });

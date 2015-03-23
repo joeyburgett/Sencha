@@ -12,7 +12,7 @@ Ext.define('Desktop.controller.Main', {
         'ResourcesModel'
     ],
     views: [
-        'MainView',
+        'Company',
         'CompanyPanel',
         'CompanyGrid',
         'CompanyForm',

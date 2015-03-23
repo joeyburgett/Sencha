@@ -1,10 +1,9 @@
-﻿var http = require('http');
-var url = require('url');
-var bodyParser = require('body-parser');
-var express = require('express');
-
-var controllers = require('./controllers');
-var repository = require('./common/Repository.js');
+﻿var http = require('http'),
+    url = require('url'),
+    bodyParser = require('body-parser'),
+    express = require('express'),
+    controllers = require('./controllers'),
+    repository = require('./common/Repository.js');
 
 var app = express();
 app.use(bodyParser.json());
